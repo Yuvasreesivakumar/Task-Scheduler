@@ -1,0 +1,55 @@
+
+  <div class="sl">
+  <h1>Student Login</h1>
+  <div class="form">
+    <form #sform="ngForm" (ngSubmit)="onSubmit()" >
+
+      <div class="sid">
+        <label>ID</label>
+        <input type="text" [(ngModel)]="studentId" name="sid" #sid="ngModel" pattern="[0-9]+" required>
+        <div class="text-danger" *ngIf="sid.invalid && (sid.dirty || sid.touched)">
+          <div *ngIf="sid.errors?.['required']">Student ID is required</div>
+          <div *ngIf="sid.errors?.['pattern']">Enter correct Student ID</div>
+        </div>
+      </div>
+
+
+      <div class="sn">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="s.name" name="sname" #sname="ngModel" pattern="[A-Za-z]+" required>
+        <div class="text-danger" *ngIf="sname.invalid && (sname.dirty || sname.touched)">
+          <div *ngIf="sname.errors?.['required']">Name is required</div>
+          <div *ngIf="sname.errors?.['pattern']">Enter correct Name</div>
+        </div>
+      </div>
+
+
+      <div class="sd">
+        <label>DOB</label>
+        <input type="date" [(ngModel)]="s.dob" name="sd" #sd="ngModel" required>
+        <span *ngIf="s.d && age !== null" style="margin-left: 10px;">Age: {{ age }}</span>
+        <div class="text-danger" *ngIf="sd.invalid && (sd.dirty || sd.touched)">
+          <div *ngIf="sd.errors?.['required']">DOB is required</div>
+        </div>
+      </div>
+
+
+      <div class="sde">
+        <label>Dept</label>
+        <select [(ngModel)]="s.department" name="sde" #sde="ngModel" required style="width: 230px;" >
+          <option *ngFor="let dep of Dept">{{ dep }}</option>
+        </select>
+        <div class="text-danger" *ngIf="sde.invalid && (sde.dirty || sde.touched)">
+          <div *ngIf="sde.errors?.['required']">Department is required</div>
+        </div>
+      </div>
+
+
+      <div class="submit">
+        <button type="submit" [disabled]="!sform.valid">Submit</button>
+      </div>
+      <h3 class="admin-link">Are you <span routerLink="al">Admin</span></h3>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Welcome, Student {{ studentId }}</h2>
+  <div class="tasks-container">
+    <div class="task-card" *ngFor="let task of tasks">
+      <div class="task-info">
+        <h3>{{ task.task }}</h3>
+        <p>Student ID: {{ task.studentId }}</p>
+      </div>
+      <button (click)="markAsRead(task.studentId)" class="btn-mark-completed">Completed</button>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,19 @@
+
+<div class="sl">
+  <h1>User Login</h1>
+  <div class="form">
+    <form action="/" #uform = "ngForm" name="uform" (ngSubmit)="onSubmit(uform)" >
+      <div class="uid">
+        <label style="padding-right: 145px;" >ID</label>
+      <input type="text"  [(ngModel)]="id" name=uid #uid="ngModel"  required>
+      </div>
+      <div class="up">
+        <label>Password</label>
+      <input type="password"  [(ngModel)]="p" name=up #up="ngModel" required>
+      </div>
+      <div class="submit">
+        <button type="submit" [disabled]="!uform.valid">Submit</button>
+      </div>
+        </form>
+      </div>
+    </div>

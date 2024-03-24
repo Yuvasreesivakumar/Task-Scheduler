@@ -1,0 +1,81 @@
+.sl {
+  border: 0.5px solid black;
+  border-radius: 0.5rem;
+  width: fit-content;
+  margin: 100px auto;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-right: 50px;
+  background-color: white;
+  background-color: #f0f0f0;
+}
+
+h1{
+  padding-left: 70px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+form {
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.sid, .sn, .sd, .sde {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sid label, .sn label, .sd label, .sde label {
+  font-size: 16px;
+  width: 100px;
+}
+
+input, select {
+  font-size: 16px;
+  padding: 10px;
+  width: calc(100% - 120px);
+}
+
+.text-danger {
+  font-size: 14px;
+}
+
+.submit {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #45a049;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #046a09;
+}
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+}
+.admin-link {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.admin-link h3 {
+  font-size: 20px;
+}
+
+.admin-link span {
+  color: blue;
+  cursor: pointer;
+}
